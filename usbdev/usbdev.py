@@ -6,7 +6,7 @@
 # Copyright 2015 Dimitris Zlatanidis <d.zlatanidis@gmail.com>
 # All rights reserved.
 
-# USBdev is a USB Device Identification Tool for Linux.
+# USBdev is a tool recognition of USB devices.
 
 # https://github.com/dslackw/USBdev
 
@@ -112,7 +112,7 @@ def options():
 def usage():
     """ print arguments usage """
     usg = [
-        "usage: usbdev [-h] [-v]",
+        "usage: {0} [-h] [-v]".format(__all__),
         "              [-t sec]"
     ]
     for opt in usg:
@@ -135,7 +135,11 @@ def arguments():
     elif len(args) == 1 and args[0] in ['-v', '--version']:
         version()
     elif len(args) == 2 and args[0] in ['-t', '--time']:
-        return args[1]
+        try:
+            return int(args[1])
+        except ValueError:
+            print('{0}: Error: integer required'.format(__all__))
+            sys.exit()
     elif len(args) == 0:
         return 1
     else:
@@ -145,7 +149,7 @@ def arguments():
 def main():
 
     stb = arguments()
-    diff = daemon(int(stb))
+    diff = daemon(stb)
     print('')
     for key, value in find_usb(diff).iteritems():
         print('{0} {1}'.format(key, value))
