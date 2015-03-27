@@ -29,6 +29,8 @@ How works
 
 The tool compares the USB devices that is connected before and after once you 
 connect to the further doors USB.
+USBdev use `linux-usb.org <http://www.linux-usb.org/usb-ids.html>`_ repository to get
+data devices.
 
  
 Installing
