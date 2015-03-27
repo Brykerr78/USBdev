@@ -33,7 +33,7 @@ __version__ = "{0}.{1}.{2}".format(*__version_info__)
 __license__ = "GNU General Public License v3 (GPLv3)"
 __email__ = "d.zlatanidis@gmail.com"
 __website__ = "https://github.com/dslackw/USBdev"
-__etc_path__ = "/etc/{0}/".format(__all__)
+__lib_path__ = "/var/lib/{0}/".format(__all__)
 
 
 def usb_ids():
@@ -47,7 +47,7 @@ def usb_ids():
 
 def repository():
     """ read usb ids repository """
-    with open(__etc_path__ + 'usb.ids', 'r') as f:
+    with open(__lib_path__ + 'usb.ids', 'r') as f:
         return f.read()
 
 
@@ -158,7 +158,7 @@ def main():
     if found:
         sys.stdout.write('Found --> ')
         for key, value in find_usb(found).iteritems():
-            print('{0} {1}'.format(key, value))
+            print("'{0} {1}'".format(key, value))
     else:
         print('No device found')
 

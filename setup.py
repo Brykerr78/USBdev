@@ -38,7 +38,7 @@ from usbdev.main import (
     __author__,
     __email__,
     __website__,
-    __etc_path__
+    __lib_path__
 )
 
 setup(
@@ -68,8 +68,8 @@ setup(
 )
 
 if "install" in sys.argv:
-    if not os.path.exists(__etc_path__):
-        os.mkdir(__etc_path__)
-    print("Install usb.ids repository --> {0}{1}".format(__etc_path__,
+    if not os.path.exists(__lib_path__):
+        os.mkdir(__lib_path__)
+    print("Install usb.ids repository --> {0}{1}".format(__lib_path__,
                                                          "usb.ids"))
-    shutil.copy2("usb.ids", __etc_path__)
+    shutil.copy2("usb.ids", __lib_path__)
