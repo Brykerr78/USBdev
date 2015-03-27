@@ -58,7 +58,12 @@ Usage
     2: 'Logitech, Inc. Unifying Receiver'
     3: 'Research In Motion, Ltd. Blackberry'
 
-    
+Asciicast
+---------
+
+.. image:: https://raw.githubusercontent.com/dslackw/images/master/USBdev/usbdev_asciicast.png
+    :target: http://asciinema.org/a/18071
+   
 CLI
 ---
 
