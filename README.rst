@@ -38,7 +38,11 @@ Installing
 
 .. code-block:: bash
 
-    $ pip install usbdev --upgrade
+    $ pip install USBdev --upgrade
+
+    or
+
+    $ pip install USBdev-00.10.20150324.tar.gz
 
 Usage
 -----
