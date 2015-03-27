@@ -51,6 +51,7 @@ Usage
     
     Using the time to connect and recognize multiple devices.
     $ usbdev --time 10
+    Found:
     1: 'Kingston Technology DataTraveler 100'
     2: 'Logitech, Inc. Unifying Receiver'
     3: 'Research In Motion, Ltd. Blackberry'
