@@ -22,28 +22,51 @@
 About
 -----
 
+USBdev is a USB devices recognition tool on Linux.
 
 How works
 ---------
+
+The tool compares the USB devices that is connected before and after once you 
+connect to the further doors USB.
+
  
 Installing
 ----------
 
 .. code-block:: bash
 
-    $ pip install sun --upgrade
+    $ pip install usbdev --upgrade
 
 Usage
 -----
 
 .. code-block:: bash
 
+    $ usbdev
+    Plugin USB device(s) now .......Done
+    Found:
+    1: 'Kingston Technology Data Traveler 100 G2 8 GiB'
+
+    
+    Using the time to connect and recognize multiple devices.
+    $ usbdev --time 10
+    1: 'Kingston Technology DataTraveler 100'
+    2: 'Logitech, Inc. Unifying Receiver'
+    3: 'Research In Motion, Ltd. Blackberry'
 
     
 CLI
 ---
 
 .. code-block:: bash
+
+    USBdev is a tool recognition of USB devices
+
+    Optional  arguments:
+      -h, --help               display this help and exit
+      -v, --version            print program version and exit
+      -t, --time [sec]         waiting time before plugin
 
 
 Copyright 
