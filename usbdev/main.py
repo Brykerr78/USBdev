@@ -79,7 +79,7 @@ def find_usb(diff):
 
 def daemon(stb):
     """ main loop recognize if usb plugin """
-    sys.stdout.write('Plugin USB device now ...')
+    sys.stdout.write('Plugin USB device(s) now ...')
     sys.stdout.flush()
     count = 0
     try:
@@ -156,9 +156,11 @@ def main():
     found = daemon(stb)
     print('')
     if found:
+        count = 0
         print('Found:')
         for key, value in find_usb(found).iteritems():
-            print("'{0} {1}'".format(key, value))
+            count += 1
+            print("{0}: '{1} {2}'".format(count, key, value))
     else:
         print('No device found')
 
