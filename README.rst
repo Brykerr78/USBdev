@@ -4,7 +4,7 @@
     :target: https://travis-ci.org/dslackw/USBdev
 .. image:: https://landscape.io/github/dslackw/USBdev/master/landscape.png
     :target: https://landscape.io/github/dslackw/USBdev/master
-.. image:: https://img.shields.io/codacy/6464ba0bd1e342e28388c71a34b3a5e8.svg
+.. image:: https://img.shields.io/codacy/050af4c8f1574e29b7382dfc2635a1a4.svg
     :target: https://www.codacy.com/public/dzlatanidis/USBdev/dashboard
 .. image:: https://img.shields.io/pypi/dm/USBdev.svg
     :target: https://pypi.python.org/pypi/USBdev
