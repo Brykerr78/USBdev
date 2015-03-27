@@ -57,6 +57,7 @@ Usage
     
     Using the time to connect and recognize multiple devices.
     $ usbdev --time 10
+    Plugin USB device(s) now .......Done
     Found:
     1: 'Kingston Technology DataTraveler 100'
     2: 'Logitech, Inc. Unifying Receiver'
