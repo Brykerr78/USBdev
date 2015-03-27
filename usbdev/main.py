@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# usbdev.py file is part of USBdev.
+# main.py file is part of USBdev.
 
 # Copyright 2015 Dimitris Zlatanidis <d.zlatanidis@gmail.com>
 # All rights reserved.
@@ -59,7 +59,7 @@ def fix_ids(id):
 
 
 def find_usb(diff):
-    """ return usb vendor_name and device name """
+    """ return usb vendor name and device name """
     usb_find = {}
     vendor_id, vendor_name = '', ''
     for search in repository().splitlines():
@@ -80,15 +80,18 @@ def daemon(stb):
     """ main loop recognize if usb plugin """
     sys.stdout.write('Plugin USB device now ...')
     sys.stdout.flush()
+    count = 0
     try:
         while True:
             before = usb_ids()
             time.sleep(stb)
+            count += 1
             sys.stdout.write('.')
             sys.stdout.flush()
             after = usb_ids()
             diff = dict(set(after.items()) - set(before.items()))
-            if diff:
+            if diff or count == 60:
+                sys.stdout.write('Done')
                 break
         return diff
     except KeyboardInterrupt:
@@ -127,7 +130,7 @@ def version():
 
 
 def arguments():
-    """ CLI options """
+    """ CLI control """
     args = sys.argv
     args.pop(0)
     if len(args) == 1 and args[0] in ['-h', '--help']:
@@ -149,10 +152,14 @@ def arguments():
 def main():
 
     stb = arguments()
-    diff = daemon(stb)
+    found = daemon(stb)
     print('')
-    for key, value in find_usb(diff).iteritems():
-        print('{0} {1}'.format(key, value))
+    if found:
+        sys.stdout.write('Found --> ')
+        for key, value in find_usb(found).iteritems():
+            print('{0} {1}'.format(key, value))
+    else:
+        print('No device found')
 
 if __name__ == '__main__':
     main()
