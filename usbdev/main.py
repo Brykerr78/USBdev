@@ -156,7 +156,7 @@ def main():
     found = daemon(stb)
     print('')
     if found:
-        sys.stdout.write('Found --> ')
+        print('Found:')
         for key, value in find_usb(found).iteritems():
             print("'{0} {1}'".format(key, value))
     else:
