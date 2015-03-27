@@ -22,6 +22,10 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 
+import os
+import sys
+import shutil
+
 try:
     from setuptools import setup
 except ImportError:
@@ -32,7 +36,9 @@ from usbdev.main import (
     __all__,
     __version__,
     __author__,
-    __email__
+    __email__,
+    __website__,
+    __etc_path__
 )
 
 setup(
@@ -44,7 +50,7 @@ setup(
     keywords=["usb", "device"],
     author=__author__,
     author_email=__email__,
-    url="https://github.com/dslackw/USBdev",
+    url=__website__,
     package_data={"": ["LICENSE", "README.rst", "CHANGELOG"]},
     install_requires=['pyusb>=1.0.0b2'],
     classifiers=[
@@ -60,3 +66,10 @@ setup(
         ],
     long_description=open("README.rst").read()
 )
+
+if "install" in sys.argv:
+    if not os.path.exists(__etc_path__):
+        os.mkdir(__etc_path__)
+    print("Install usb.ids repository --> {0}{1}".format(__etc_path__,
+                                                         "usb.ids"))
+    shutil.copy2("usb.ids", __etc_path__)

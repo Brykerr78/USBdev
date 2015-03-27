@@ -33,6 +33,7 @@ __version__ = "{0}.{1}.{2}".format(*__version_info__)
 __license__ = "GNU General Public License v3 (GPLv3)"
 __email__ = "d.zlatanidis@gmail.com"
 __website__ = "https://github.com/dslackw/USBdev"
+__etc_path__ = "/etc/{0}/".format(__all__)
 
 
 def usb_ids():
@@ -46,7 +47,7 @@ def usb_ids():
 
 def repository():
     """ read usb ids repository """
-    with open('/home/dslackw/USBdev/usb.ids', 'r') as f:
+    with open(__etc_path__ + 'usb.ids', 'r') as f:
         return f.read()
 
 
