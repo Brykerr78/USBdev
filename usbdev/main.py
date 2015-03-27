@@ -51,12 +51,12 @@ def repository():
         return f.read()
 
 
-def fix_ids(id):
+def fix_ids(ven_id):
     """ convert id from hex to string """
-    len_id = len(id)
+    len_id = len(ven_id)
     if len_id < 4:
-        return('0' * (4 - len_id) + id)
-    return id
+        return('0' * (4 - len_id) + ven_id)
+    return ven_id
 
 
 def find_usb(diff):
