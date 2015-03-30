@@ -42,7 +42,7 @@ Installing
 
     or
 
-    $ pip install USBdev-00.10.20150324.tar.gz
+    $ pip install USBdev-00.11.20150327.tar.gz
 
 Usage
 -----
