@@ -9,8 +9,8 @@
 #	The latest version can be obtained from
 #		http://www.linux-usb.org/usb.ids
 #
-# Version: 2015.03.24
-# Date:    2015-03-24 12:10:50
+# Version: 2015.03.27
+# Date:    2015-03-27 20:34:06
 #
 
 # Vendors, devices and interfaces. Please keep sorted.
@@ -15541,6 +15541,16 @@
 	083e  MetaGeek Wi-Spy
 	083f  MetaGeek Wi-Spy 2.4x
 	0938  Iguanaworks USB IR Transceiver
+	0a96  raphnet.net usb_game12
+	0a97  raphnet.net SNES mouse adapter
+	0a98  raphnet.net USBTenki
+	0a99  raphnet.net NES
+	0a9a  raphnet.net Gamecube/N64 controller
+	0a9b  raphnet.net DB9Joy
+	0a9c  raphnet.net Intellivision
+	0a9d  raphnet.net 4nes4snes
+	0a9e  raphnet.net Megadrive multitap
+	0a9f  raphnet.net MultiDB9joy
 	0c30  Telldus TellStick
 	0c31  Telldus TellStick Duo
 	0c9f  USBtiny
@@ -17029,6 +17039,22 @@
 	3300  WL-140 / Hawking HWU36D 802.11b Wireless Adapter [Intersil PRISM 3]
 2899  Toptronic Industrial Co., Ltd
 	012c  Camera Device
+289b  Dracal/Raphnet technologies
+	0001  Gamecube/N64 controller v2.2
+	0002  2nes2snes
+	0003  4nes4snes
+	0004  Gamecube/N64 controller v2.3
+	0005  Saturn (Joystick mode)
+	0006  Saturn (Mouse mode)
+	0007  Famicom controller
+	0008  Dreamcast (Joystick mode)
+	0009  Dreamcast (Mouse mode)
+	000a  Dreamcast (Keyboard mode)
+	000b  Gamecube/N64 controller v2.9 (Keyboard mode)
+	000c  Gamecube/N64 controller v2.9 (Joystick mode)
+	0100  Dual-relay board
+	0500  Energy meter
+	0502  Precision barometer
 2931  Jolla Oy
 	0a01  Jolla Phone MTP
 	0a02  Jolla Phone Developer
