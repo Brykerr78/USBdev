@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# usbdev file is part of USBdev.
+# main.py file is part of USBdev.
 
 # Copyright 2015 Dimitris Zlatanidis <d.zlatanidis@gmail.com>
 # All rights reserved.
@@ -22,7 +22,12 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 
-from usbdev.main import main
-
-if __name__ == "__main__":
-    main()
+__all__ = "usbdev"
+__author__ = "dslackw"
+__copyright__ = 2015
+__version_info__ = (10, 12, 20150331)
+__version__ = "{0}.{1}.{2}".format(*__version_info__)
+__license__ = "GNU General Public License v3 (GPLv3)"
+__email__ = "d.zlatanidis@gmail.com"
+__website__ = "https://github.com/dslackw/USBdev"
+__lib_path__ = "/var/lib/{0}/".format(__all__)

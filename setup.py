@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 # setup.py file is part of USBdev.
@@ -32,7 +32,7 @@ except ImportError:
     from distutils.core import setup
 
 
-from usbdev.main import (
+from usbdev.__metadata__ import (
     __all__,
     __version__,
     __author__,
