@@ -68,7 +68,7 @@ Asciicast
 ---------
 
 .. image:: https://raw.githubusercontent.com/dslackw/images/master/USBdev/usbdev_asciicast.png
-    :target: http://asciinema.org/a/18071
+    :target: http://asciinema.org/a/18905
    
 CLI
 ---
