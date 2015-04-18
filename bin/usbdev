@@ -21,6 +21,14 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
+'''
+  _   _ ____  ____      _
+ | | | / ___|| __ )  __| | _____   __
+ | | | \___ \|  _ \ / _` |/ _ \ \ / /
+ | |_| |___) | |_) | (_| |  __/\ V /
+  \___/|____/|____/ \__,_|\___| \_/
+
+'''
 
 from usbdev.main import main
 
