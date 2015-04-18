@@ -43,8 +43,8 @@ Install
     $ python setup.py install --record usbdev.txt
 
 
-Unistall
---------
+Uninstall
+---------
 
 .. code-block:: bash
 
