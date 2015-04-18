@@ -42,7 +42,7 @@ Installing
 
     or
 
-    $ pip install USBdev-00.11.20150327.tar.gz
+    $ pip install USBdev-<version>.tar.gz
 
 Usage
 -----
@@ -51,17 +51,18 @@ Usage
 
     $ usbdev
     Plugin USB device(s) now .......Done
-    Found:
-    1: 'Kingston Technology Data Traveler 100 G2 8 GiB'
-
+    Found: Vendor(s)             Device(s)
+    1:     Kingston Technology   DataTraveler 100
+    
     
     Using the time to connect and recognize multiple devices.
+    
     $ usbdev --time 10
     Plugin USB device(s) now .......Done
-    Found:
-    1: 'Kingston Technology DataTraveler 100'
-    2: 'Logitech, Inc. Unifying Receiver'
-    3: 'Research In Motion, Ltd. Blackberry'
+    Found: Vendor(s)             Device(s)
+    1:     Kingston Technology   DataTraveler 100
+    2:     Logitech, Inc.        Unifying Receiver
+    3:     Alcor Micro Corp.     Flash Drive
 
 Asciicast
 ---------

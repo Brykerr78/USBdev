@@ -46,7 +46,7 @@ def repository():
         return f.read()
 
 
-def fix_ids(ven_id):
+def fixID(ven_id):
     """ convert id from hex to string """
     len_id = len(ven_id)
     if len_id < 4:
@@ -54,22 +54,36 @@ def fix_ids(ven_id):
     return ven_id
 
 
-def find_usb(diff):
+def usbDatabase():
+    """ create usb database dictionary with vendor name
+    as key and products name as value """
+    data = {}
+    for line in repository().splitlines():
+        if line and not line.startswith('\t'):
+            vn = line.strip()
+            data[vn] = []
+        if line.startswith('\t'):
+            data[vn] += [line.strip()]
+    return data
+
+
+def findUSB(diff):
     """ return usb vendor name and device name """
-    usb_find = {}
-    vendor_id, vendor_name = '', ''
-    for search in repository().splitlines():
-        for ven, pro in diff.items():
-            if ven:
-                vendor_id = fix_ids(ven[2:])
-            if search.startswith(vendor_id):
-                vendor_name = search[len(vendor_id):].strip()
-            if vendor_name and vendor_name not in usb_find.keys():
-                usb_find[vendor_name] = ''
-            if (vendor_name and not usb_find[vendor_name] and
-                    search.startswith('\t{0}'.format(pro[2:]))):
-                usb_find[vendor_name] = search[6:].strip()
-    return usb_find
+    usbFind = {}
+    vendID, prodID = '', ''
+    for ven, pro in diff.items():
+        if ven:
+            vendID = fixID(ven[2:])
+        if pro:
+            prodID = fixID(pro[2:])
+        for key, value in usbDatabase().iteritems():
+            if vendID == key[:4]:
+                vn = key[5:].strip()
+                usbFind[vn] = 'Not found'
+                for v in value:
+                    if prodID in v:
+                        usbFind[vn] = v[5:].strip()
+    return usbFind
 
 
 def daemon(stb):
@@ -104,7 +118,7 @@ def options():
         "  -t, --time [sec]         waiting time before plugin",
     ]
     for opt in args:
-        print opt
+        print('{0}'.format(opt))
     sys.exit()
 
 
@@ -115,7 +129,7 @@ def usage():
         "              [-t sec]"
     ]
     for opt in usg:
-        print opt
+        print('{0}'.format(opt))
     sys.exit()
 
 
@@ -149,13 +163,18 @@ def main():
 
     stb = arguments()
     found = daemon(stb)
+    venLenght = 20
+    for ven in findUSB(found).keys():
+        if len(ven) > venLenght:
+            venLenght = len(ven)
     print('')
     if found:
         count = 0
-        print('Found:')
-        for key, value in find_usb(found).iteritems():
+        print('Found: Vendor(s) {0} Device(s)'.format(' ' * (venLenght - 9)))
+        for key, value in findUSB(found).iteritems():
             count += 1
-            print("{0}: '{1} {2}'".format(count, key, value))
+            print("{0}:     {1} {2} {3}".format(
+                count, key, ' ' * (venLenght - len(key)), value))
     else:
         print('No device found')
 
