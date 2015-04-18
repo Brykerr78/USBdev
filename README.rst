@@ -33,16 +33,23 @@ USBdev use `linux-usb.org <http://www.linux-usb.org/usb-ids.html>`_ repository t
 data devices.
 
  
-Installing
-----------
+Install
+-------
 
 .. code-block:: bash
 
-    $ pip install USBdev --upgrade
+    $ tar xvf USBdev-<version>.tar.gz
+    $ cd USBdev-<version>
+    $ python setup.py install --record usbdev.txt
 
-    or
 
-    $ pip install USBdev-<version>.tar.gz
+Unistall
+--------
+
+.. code-block:: bash
+
+    $ cat usbdev.txt | xargs rm -rf
+
 
 Usage
 -----
