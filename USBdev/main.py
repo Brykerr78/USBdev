@@ -24,7 +24,7 @@
 import sys
 import time
 import usb.core
-from USBdev.__metadata__ import (
+from __metadata__ import (
     __prog__,
     __version__,
     __lib_path__

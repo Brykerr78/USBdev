@@ -38,9 +38,11 @@ Install
 
 .. code-block:: bash
 
-    $ tar xvf USBdev-<version>.tar.gz
-    $ cd USBdev-<version>
-    $ python setup.py install --record usbdev.txt
+    $ pip install USBdev
+    
+    or
+
+    $ pip install USBdev-<version>.tar.gz
 
 
 Uninstall
@@ -48,7 +50,7 @@ Uninstall
 
 .. code-block:: bash
 
-    $ cat usbdev.txt | xargs rm -rf
+    $ pip uninstall USBdev
 
 
 Usage

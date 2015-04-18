@@ -1,4 +1,10 @@
 18-04-2015
+Version 2015.04.18
+
+[Feature] - Add new version format.
+          - Remove all pypi old releases.
+
+18-04-2015
 Version 11.13.20150418
 
 [Updated] - Fix pip packages.
