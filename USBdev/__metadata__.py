@@ -22,12 +22,12 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 
-__all__ = "usbdev"
+__prog__ = "usbdev"
 __author__ = "dslackw"
 __copyright__ = 2015
-__version_info__ = (10, 12, 20150331)
+__version_info__ = (11, 13, 20150418)
 __version__ = "{0}.{1}.{2}".format(*__version_info__)
 __license__ = "GNU General Public License v3 (GPLv3)"
 __email__ = "d.zlatanidis@gmail.com"
 __website__ = "https://github.com/dslackw/USBdev"
-__lib_path__ = "/var/lib/{0}/".format(__all__)
+__lib_path__ = "/var/lib/{0}/".format(__prog__)

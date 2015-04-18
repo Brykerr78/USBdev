@@ -32,8 +32,8 @@ except ImportError:
     from distutils.core import setup
 
 
-from usbdev.__metadata__ import (
-    __all__,
+from USBdev.__metadata__ import (
+    __prog__,
     __version__,
     __author__,
     __email__,
@@ -42,8 +42,8 @@ from usbdev.__metadata__ import (
 )
 
 setup(
-    name=__all__,
-    packages=["usbdev"],
+    name=__prog__,
+    packages=["USBdev"],
     scripts=["bin/usbdev"],
     version=__version__,
     description="USBdev is a tool recognition of USB devices",

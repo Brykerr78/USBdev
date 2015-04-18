@@ -30,7 +30,7 @@
 
 '''
 
-from usbdev.main import main
+from USBdev.main import main
 
 if __name__ == "__main__":
     main()

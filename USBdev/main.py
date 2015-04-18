@@ -25,7 +25,7 @@ import sys
 import time
 import usb.core
 from __metadata__ import (
-    __all__,
+    __prog__,
     __version__,
     __lib_path__
 )
@@ -125,7 +125,7 @@ def options():
 def usage():
     """ print arguments usage """
     usg = [
-        "usage: {0} [-h] [-v]".format(__all__),
+        "usage: {0} [-h] [-v]".format(__prog__),
         "              [-t sec]"
     ]
     for opt in usg:
@@ -151,7 +151,7 @@ def arguments():
         try:
             return int(args[1])
         except ValueError:
-            print('{0}: Error: integer required'.format(__all__))
+            print('{0}: Error: integer required'.format(__prog__))
             sys.exit()
     elif len(args) == 0:
         return 1
