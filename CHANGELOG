@@ -1,3 +1,8 @@
+23-04-2015
+Version 2015.04.21
+
+[Updated] - Repository update.
+
 18-04-2015
 Version 2015.04.18
 
@@ -8,7 +13,8 @@ Version 2015.04.18
 Version 11.13.20150418
 
 [Updated] - Fix pip packages.
-          - Fix Should warn when using a device name that doesn't belong to the vendor id #2.
+          - Fix Should warn when using a device name that doesn't 
+            belong to the vendor id #2.
 
 30-03-2015
 Version 00.11.20150327
