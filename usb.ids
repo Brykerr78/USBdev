@@ -9,8 +9,8 @@
 #	The latest version can be obtained from
 #		http://www.linux-usb.org/usb.ids
 #
-# Version: 2015.04.24
-# Date:    2015-04-24 20:34:11
+# Version: 2015.05.05
+# Date:    2015-05-05 20:34:11
 #
 
 # Vendors, devices and interfaces. Please keep sorted.
@@ -16844,6 +16844,16 @@
 	648b  TEW-648UBM 802.11n 150Mbps Micro Wireless N Adapter [Realtek RTL8188CUS]
 2101  ActionStar
 	0201  SIIG 4-to-2 Printer Switch
+2109  VIA Labs, Inc.
+	0700  VL700 SATA 3Gb/s bridge
+	0701  VL701 SATA 3Gb/s bridge
+	0810  VL81x Hub
+	0811  Hub
+	0812  VL812 Hub
+	2811  Hub
+	2812  VL812 Hub
+	3431  Hub
+	8110  Hub
 2149  Advanced Silicon S.A.
 	211b  Touchscreen Controller
 	2703  TS58xxA/TC56xxA [CoolTouch]
@@ -17038,6 +17048,9 @@
 2478  Tripp-Lite
 	2008  U209-000-R Serial Port
 249c  M2Tech s.r.l.
+24e1  Paratronic
+	3001  Adp-usb
+	3005  Radius
 2632  TwinMOS
 	3209  7-in-1 Card Reader
 2639  Xsens
