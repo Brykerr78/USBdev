@@ -109,28 +109,20 @@ def daemon(stb):
 
 
 def options():
-    """ print arguments options """
-    args = [
-        "USBdev is a tool recognition of USB devices\n",
-        "Optional  arguments:",
-        "  -h, --help               display this help and exit",
-        "  -v, --version            print program version and exit",
-        "  -t, --time [sec]         waiting time before plugin",
-    ]
-    for opt in args:
-        print('{0}'.format(opt))
-    sys.exit()
+    """USBdev is a tool recognition of USB devices
+
+Optional  arguments:
+  -h, --help               Display this help and exit
+  -v, --version            Print program version and exit
+  -t, --time [sec]         Waiting time before plugin"""
+    print(options.__doc__)
+    sys.exit(0)
 
 
 def usage():
-    """ print arguments usage """
-    usg = [
-        "usage: {0} [-h] [-v]".format(__prog__),
-        "              [-t sec]"
-    ]
-    for opt in usg:
-        print('{0}'.format(opt))
-    sys.exit()
+    """Usage: usbdev [-h] [-v] [-t [sec]]"""
+    print(usage.__doc__)
+    sys.exit(0)
 
 
 def version():
