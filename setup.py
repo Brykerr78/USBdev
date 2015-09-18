@@ -23,8 +23,6 @@
 
 
 import os
-import sys
-import shutil
 
 try:
     from setuptools import setup
@@ -41,6 +39,17 @@ from USBdev.__metadata__ import (
     __lib_path__
 )
 
+REQUIREMENTS = [
+    "pyusb >= 1.0.0b2"
+]
+
+if not os.path.exists(__lib_path__):
+    os.mkdir(__lib_path__)
+
+data = [
+    (__lib_path__, ["usb.ids"])
+]
+
 setup(
     name=__prog__,
     packages=["USBdev"],
@@ -52,7 +61,8 @@ setup(
     author_email=__email__,
     url=__website__,
     package_data={"": ["LICENSE", "README.rst", "CHANGELOG"]},
-    install_requires=['pyusb>=1.0.0b2'],
+    data_files=data,
+    install_requires=REQUIREMENTS,
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Classifier: Development Status :: 3 - Alpha",
@@ -66,10 +76,3 @@ setup(
         ],
     long_description=open("README.rst").read()
 )
-
-if "install" in sys.argv:
-    if not os.path.exists(__lib_path__):
-        os.mkdir(__lib_path__)
-    print("Install usb.ids repository --> {0}{1}".format(__lib_path__,
-                                                         "usb.ids"))
-    shutil.copy2("usb.ids", __lib_path__)
