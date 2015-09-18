@@ -1,3 +1,10 @@
+2015.09.04 - 22/09/2015
+Added:
+- Print vendor ID and product ID
+Updated: 
+- Repository updated for version 2015.09.04
+- setup.py file
+
 2015.06.22 - 04/07/2015
 Updated: 
 - Repository updated for version 2015.06.22
