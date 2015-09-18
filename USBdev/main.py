@@ -78,11 +78,12 @@ def findUSB(diff):
             prodID = fixID(pro[2:])
         for key, value in usbDatabase().iteritems():
             if vendID == key[:4]:
-                vn = key[5:].strip()
-                usbFind[vn] = 'Not found'
+                vn = '{0} ({1})'.format(key[5:].strip(), vendID.strip())
+                usbFind[vn] = '{0} ({1})'.format('Not found', vendID.strip())
                 for v in value:
                     if prodID in v:
-                        usbFind[vn] = v[5:].strip()
+                        usbFind[vn] = '{0} ({1})'.format(v[5:].strip(),
+                                                         prodID.strip())
     return usbFind
 
 
@@ -115,20 +116,17 @@ Optional  arguments:
   -h, --help               Display this help and exit
   -v, --version            Print program version and exit
   -t, --time [sec]         Waiting time before plugin"""
-    print(options.__doc__)
-    sys.exit(0)
+    sys.exit(options.__doc__)
 
 
 def usage():
     """Usage: usbdev [-h] [-v] [-t [sec]]"""
-    print(usage.__doc__)
-    sys.exit(0)
+    sys.exit(usage.__doc__)
 
 
 def version():
     """ print version and exit """
-    print('Version: {0}'.format(__version__))
-    sys.exit()
+    sys.exit('Version: {0}'.format(__version__))
 
 
 def arguments():
@@ -163,7 +161,7 @@ def main():
     if found:
         count = 0
         print('Found: Vendor(s) {0} Device(s)'.format(' ' * (venLenght - 9)))
-        for key, value in findUSB(found).iteritems():
+        for key, value, in findUSB(found).iteritems():
             count += 1
             print("{0}:     {1} {2} {3}".format(
                 count, key, ' ' * (venLenght - len(key)), value))
