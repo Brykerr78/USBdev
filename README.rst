@@ -60,18 +60,19 @@ Usage
 
     $ usbdev
     Plugin USB device(s) now .......Done
-    Found: Vendor(s)             Device(s)
-    1:     Kingston Technology   DataTraveler 100
+    Found: Vendor(s)                    Device(s)
+    1:     Kingston Technology (0951)   DataTraveler 100 (1607)
+
     
     
     Using the time to connect and recognize multiple devices.
     
     $ usbdev --time 10
     Plugin USB device(s) now .......Done
-    Found: Vendor(s)             Device(s)
-    1:     Kingston Technology   DataTraveler 100
-    2:     Logitech, Inc.        Unifying Receiver
-    3:     Alcor Micro Corp.     Flash Drive
+    Found: Vendor(s)                   Device(s)
+    1:     Kingston Technology (0951)  DataTraveler 100 (1607)
+    2:     Logitech, Inc. (046d)       Unifying Receiver (c52b)
+    3:     Alcor Micro Corp. (058f)    Flash Drive (1234)
 
 Asciicast
 ---------
