@@ -40,7 +40,7 @@ from USBdev.__metadata__ import (
 )
 
 REQUIREMENTS = [
-    "pyusb >= 1.0.0b2"
+    "pyusb >= 1.0.0"
 ]
 
 if not os.path.exists(__lib_path__):
