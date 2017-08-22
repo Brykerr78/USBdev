@@ -1,3 +1,7 @@
+2017.08.22
+Updated:
+- Repository for version 2017.07.29
+
 2016.09.13
 Updated:
 - Requirements (pyusb >= 1.0.0)
